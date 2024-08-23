@@ -12,9 +12,10 @@ though it only crashes when `torchvision` is installed.
 
 ## Environment info
 
-- OS: Ubuntu 22.04.4
-- miniconda: 24.5.0
+- OS: Ubuntu `22.04.4`
+- miniconda: `24.5.0`
 - Python: `3.10`, `3.11`, `3.12`
+- mypy: `1.11.1`
 
 ## Script content
 
