@@ -2,7 +2,13 @@
 Minimal repo for reproducing bug
 ## description
 
-When running mypy on a file that imports `torch.nn.functional` it fails when `torchvision` is installed.
+mypy crashes on a file that imports `torch.nn.functional` when `torchvision` is installed in conjunction  with `--follow-imports=skip` flag.
+
+## Expected behavior
+I was trying to use `mypy` with the `--follow-imports=skip` flag to check a single file in a project that uses `torch.nn.functional`. I expected `mypy` to produce a report for that single file.
+
+though it only crashes when `torchvision` is installed.
+
 
 ## Environment info
 
@@ -57,7 +63,6 @@ Success: no issues found in 1 source file
 pip install torchvision
 mypy --follow-imports=skip harmless.py
 ```
-
 result:
 ```bash
 Traceback (most recent call last):
